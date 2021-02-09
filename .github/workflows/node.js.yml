@@ -42,10 +42,10 @@ jobs:
           node-version: '10.x'
           registry-url: 'https://registry.npmjs.org'
       - run: sudo apt install npm
-      - name: Running deploy for poc-for-ikea-69842
+      - name: Running deploy for Testing
         uses: actions-hub/gcloud@master
         env:
           PROJECT_ID: tranquil-marker-274412
-          APPLICATION_CREDENTIALS:  nilsaitest@tranquil-marker-274412.iam.gserviceaccount.com
+          APPLICATION_CREDENTIALS:  ${{secrets.SERVICEACCOUNT}}
         with:
-          args: app deploy app.yaml --project=tranquil-marker-274412
+          args: app deploy App.yaml --project=tranquil-marker-274412
