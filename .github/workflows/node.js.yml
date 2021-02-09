@@ -46,6 +46,6 @@ jobs:
         uses: actions-hub/gcloud@master
         env:
           PROJECT_ID: tranquil-marker-274412
-          APPLICATION_CREDENTIALS:  ${{secrets.SERVICEACCOUNT}}
+#           APPLICATION_CREDENTIALS:  ${{secrets.SERVICEACCOUNT}}
         with:
           args: app deploy App.yaml --project=tranquil-marker-274412
